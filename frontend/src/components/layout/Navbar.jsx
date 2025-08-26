@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { User, LogOut, Menu, X } from 'lucide-react';
 import Button from '../ui/Button';
+import logo from '../../assets/logo.png'; // Step 1: Import the logo image
 
 // Navbar Component
 const Navbar = ({ user, onLogin, onSignup, onLogout }) => {
@@ -19,9 +20,11 @@ const Navbar = ({ user, onLogin, onSignup, onLogout }) => {
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          {/* Step 2: Replace the h1 text with an img tag for the logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-blue-600">Somayaji Industries</h1>
+            <a href="#home" className="flex items-center">
+              <img className="h-10 w-auto" src={logo} alt="Somayaji Industries Logo" />
+            </a>
           </div>
           
           {/* Desktop Navigation */}

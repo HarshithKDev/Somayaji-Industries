@@ -1,24 +1,30 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Award, Users, Settings } from 'lucide-react';
 import Button from '../components/ui/Button';
+import heroBackground from '../assets/hero-bg.jpg';
 
 // Hero Section Component
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="absolute inset-0 bg-black/20"></div>
+   <section 
+      id="home" 
+      className="relative min-h-screen flex items-center justify-center bg-cover bg-center" 
+      style={{ backgroundImage: `url(${heroBackground})` }}
+    >
+      {/* This overlay makes the text readable on the background image */}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-xs"></div> 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-          Quality Craftsmanship in <span className="text-blue-600">Every Piece</span>
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          Quality Craftsmanship in <span className="text-blue-400">Every Piece</span>
         </h1>
-        <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
           Custom fabrication solutions for your industrial and residential needs. From iron gates to wooden furniture, we craft excellence.
         </p>
         <div className="space-x-4">
           <Button size="lg" onClick={() => document.getElementById('products').scrollIntoView({ behavior: 'smooth' })}>
             Explore Our Products
           </Button>
-          <Button variant="outline" size="lg" onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}>
+          <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-gray-900" onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}>
             Learn More
           </Button>
         </div>
@@ -160,8 +166,8 @@ const ContactSection = () => {
           <div className="flex flex-col items-center">
             <MapPin size={48} className="mb-4 text-blue-400" />
             <h3 className="text-xl font-bold mb-2">Location</h3>
-            <p className="text-gray-300">Industrial Area</p>
-            <p className="text-gray-300">Mangaluru, Karnataka, India</p>
+            <p className="text-gray-300">Bangalore - Mangalore Hwy, B.C Road, </p>
+            <p className="text-gray-300">Bantwal, Karnataka - 574219</p>
           </div>
         </div>
         
