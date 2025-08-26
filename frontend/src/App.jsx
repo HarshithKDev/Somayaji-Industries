@@ -1,38 +1,125 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import { X } from 'lucide-react';
 
-function App() {
-  const [count, setCount] = useState(0)
+import Modal from './components/ui/Modal';
+import LoginForm from './components/auth/LoginForm';
+import SignupForm from './components/auth/SignupForm';
+import OTPForm from './components/auth/OTPForm';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+
+// Main App Component
+const App = () => {
+  const [user, setUser] = useState(null);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
+  const [authStep, setAuthStep] = useState('signup'); // 'signup' | 'otp'
+  const [signupData, setSignupData] = useState(null);
+
+  const handleLoginSuccess = (userData) => {
+    setUser(userData);
+    setIsLoginModalOpen(false);
+  };
+
+  const handleSignupOTPRequired = (userData) => {
+    setSignupData(userData);
+    setAuthStep('otp');
+  };
+
+  const handleOTPSuccess = (userData) => {
+    setUser(userData);
+    setIsSignupModalOpen(false);
+    setAuthStep('signup');
+    setSignupData(null);
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+  };
+
+  const openLogin = () => {
+    setIsLoginModalOpen(true);
+    setIsSignupModalOpen(false);
+  };
+
+  const openSignup = () => {
+    setIsSignupModalOpen(true);
+    setIsLoginModalOpen(false);
+    setAuthStep('signup');
+  };
+
+  const switchToSignup = () => {
+    setIsLoginModalOpen(false);
+    setIsSignupModalOpen(true);
+    setAuthStep('signup');
+  };
+
+  const switchToLogin = () => {
+    setIsSignupModalOpen(false);
+    setIsLoginModalOpen(true);
+  };
 
   return (
-    <>
-      <div>
-        <h1 className="bg-amber-600 text-3xl font-bold underline">
-    Hello world!
-  </h1>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="min-h-screen">
+      {/* Navigation */}
+      <Navbar
+        user={user}
+        onLogin={openLogin}
+        onSignup={openSignup}
+        onLogout={handleLogout}
+      />
 
-export default App
+      {/* Main Content */}
+      <main className="pt-16">
+        <HomePage />
+        <AboutPage />
+      </main>
+
+      {/* Footer */}
+      <Footer />
+
+      {/* Login Modal */}
+      <Modal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)}>
+        <div className="relative">
+          <button
+            onClick={() => setIsLoginModalOpen(false)}
+            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+          >
+            <X size={20} />
+          </button>
+          <LoginForm
+            onSuccess={handleLoginSuccess}
+            onSwitchToSignup={switchToSignup}
+          />
+        </div>
+      </Modal>
+
+      {/* Signup Modal */}
+      <Modal isOpen={isSignupModalOpen} onClose={() => setIsSignupModalOpen(false)}>
+        <div className="relative">
+          <button
+            onClick={() => setIsSignupModalOpen(false)}
+            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+          >
+            <X size={20} />
+          </button>
+          {authStep === 'signup' ? (
+            <SignupForm
+              onOTPRequired={handleSignupOTPRequired}
+              onSwitchToLogin={switchToLogin}
+            />
+          ) : (
+            <OTPForm
+              userData={signupData}
+              onSuccess={handleOTPSuccess}
+            />
+          )}
+        </div>
+      </Modal>
+    </div>
+  );
+};
+
+export default App;
