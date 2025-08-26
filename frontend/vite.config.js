@@ -8,4 +8,7 @@ export default defineConfig({
     tailwindcss(),
     react()],
     base: '/Somayaji-Industries/',
+    build: {
+    target: 'es2015'   // make build Safari-friendly
+  }
 })
