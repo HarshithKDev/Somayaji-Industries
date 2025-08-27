@@ -11,14 +11,6 @@ const Footer = () => {
             <p className="text-gray-300 mb-4 leading-relaxed">
               Your trusted partner for custom fabrication solutions. Quality craftsmanship, innovative designs, and exceptional service since 2008.
             </p>
-            <div className="flex space-x-4">
-              <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">S</span>
-              </div>
-              <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">I</span>
-              </div>
-            </div>
           </div>
           
           <div>
