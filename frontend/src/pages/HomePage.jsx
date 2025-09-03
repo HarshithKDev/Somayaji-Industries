@@ -1,7 +1,13 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Award, Users, Settings } from 'lucide-react';
 import Button from '../components/ui/Button';
-import heroBackground from '../assets/hero-bg.jpg';
+import heroBackground from '../assets/hero-bg.webp';
+import gateImage from '../assets/gate.webp';
+import deskImage from '../assets/table.webp'; 
+import railingsImage from '../assets/railing.webp'; 
+import shelvesImage from '../assets/shelf.webp';// Your gate image
+import decorImage from '../assets/decor.webp'; // Your decor image
+import cupImage from '../assets/cup.webp'; // Your decor image
 
 // Hero Section Component
 const HeroSection = () => {
@@ -34,16 +40,11 @@ const HeroSection = () => {
 };
 
 // Product Card Component
-const ProductCard = ({ title, description, category }) => {
+const ProductCard = ({ title, description, category, image }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      <div className="h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span className="text-white font-bold text-2xl">{title.charAt(0)}</span>
-          </div>
-          <p className="text-gray-500">Product Image</p>
-        </div>
+      <div className="h-64 bg-cover bg-center" style={{ backgroundImage: `url(${image})` }}>
+        {/* The background image is now displayed here */}
       </div>
       <div className="p-6">
         <div className="flex items-center justify-between mb-2">
@@ -65,31 +66,37 @@ const ProductsSection = () => {
       title: 'Iron Benches & Gates',
       description: 'Durable and elegant iron benches and gates crafted with precision. Perfect for gardens, parks, and residential entrances.',
       category: 'Metalwork',
+      image: gateImage,
     },
     {
       title: 'Metal Cupboards',
       description: 'Heavy-duty storage solutions with modern designs. Ideal for offices, warehouses, and industrial applications.',
       category: 'Storage',
+      image: cupImage, // Replace with your image
     },
     {
       title: 'Wooden Tables & Desks',
       description: 'Handcrafted wooden furniture combining functionality with aesthetic appeal. Custom designs available.',
       category: 'Furniture',
+      image: deskImage, // Replace with your image
     },
     {
       title: 'Custom Railings',
       description: 'Safety railings for stairs, balconies, and terraces. Available in various materials and finishes.',
       category: 'Safety',
+      image: railingsImage, // Replace with your image
     },
     {
       title: 'Industrial Shelving',
       description: 'Heavy-duty shelving systems for warehouses and industrial spaces. Modular and scalable solutions.',
       category: 'Industrial',
+      image: shelvesImage, // Replace with your image
     },
     {
       title: 'Decorative Items',
       description: 'Custom decorative pieces for homes and offices. Unique designs tailored to your preferences.',
       category: 'Decor',
+      image: decorImage, // Replace with your image
     }
   ];
 
@@ -116,7 +123,7 @@ const ProductsSection = () => {
 // Stats Component
 const StatsSection = () => {
   const stats = [
-    { icon: Award, label: 'Years Experience', value: '15+' },
+    { icon: Award, label: 'Years Experience', value: '20+' },
     { icon: Users, label: 'Happy Customers', value: '500+' },
     { icon: Settings, label: 'Projects Completed', value: '1000+' }
   ];
@@ -152,22 +159,28 @@ const ContactSection = () => {
           <div className="flex flex-col items-center">
             <Phone size={48} className="mb-4 text-blue-400" />
             <h3 className="text-xl font-bold mb-2">Phone</h3>
-            <p className="text-gray-300">+91 9876543210</p>
-            <p className="text-gray-300">+91 8765432109</p>
+            <p className="text-gray-300">+91 7619223511</p>
+            <p className="text-gray-300">+91 9448623511</p>
           </div>
           
           <div className="flex flex-col items-center">
             <Mail size={48} className="mb-4 text-blue-400" />
             <h3 className="text-xl font-bold mb-2">Email</h3>
-            <p className="text-gray-300">info@somayajiindustries.com</p>
-            <p className="text-gray-300">sales@somayajiindustries.com</p>
+            <p className="text-gray-300">Somayajiindustries3@gmail.com</p>
           </div>
           
-          <div className="flex flex-col items-center">
-            <MapPin size={48} className="mb-4 text-blue-400" />
-            <h3 className="text-xl font-bold mb-2">Location</h3>
-            <p className="text-gray-300">Bangalore - Mangalore Hwy, B.C Road, </p>
-            <p className="text-gray-300">Bantwal, Karnataka - 574219</p>
+         <div className="flex flex-col items-center">
+            <a
+              href="https://maps.app.goo.gl/zP7KRz5yNwxSuYUZ9?g_st=ipc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center transition-opacity hover:opacity-80"
+            >
+              <MapPin size={48} className="mb-4 text-blue-400" />
+              <h3 className="text-xl font-bold mb-2 text-white">Location</h3>
+              <p className="text-gray-300">Bangalore - Mangalore Hwy, B.C Road, </p>
+              <p className="text-gray-300">Bantwal, Karnataka - 574219</p>
+            </a>
           </div>
         </div>
         
