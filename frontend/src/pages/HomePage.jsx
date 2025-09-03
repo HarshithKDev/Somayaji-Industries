@@ -10,7 +10,7 @@ import cupImage from '../assets/cup.png';
 
 // Hero Section Component
 const HeroSection = () => {
-  // Define the background pattern style
+  
   const heroPatternStyle = {
     backgroundColor: '#111827', // bg-gray-900
     backgroundImage: `radial-gradient(rgba(107, 114, 128, 0.2) 1px, transparent 0)`,
