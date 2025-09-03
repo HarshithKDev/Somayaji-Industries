@@ -2,13 +2,13 @@ import React from 'react';
 
 // Button Component
 const Button = ({ children, variant = 'primary', size = 'md', onClick, className = '', ...props }) => {
-  const baseClasses = 'font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
+  const baseClasses = 'font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900';
   
    const variants = {
-    primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500',
-    secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-500',
-    outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 focus:ring-blue-500', // removed hover:text-white
-    ghost: 'text-gray-600 hover:bg-gray-100 focus:ring-gray-500'
+    primary: 'bg-indigo-600 hover:bg-indigo-700 text-white focus:ring-indigo-500',
+    secondary: 'bg-gray-700 hover:bg-gray-600 text-gray-200 focus:ring-gray-500',
+    outline: 'border-2 border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white focus:ring-indigo-500',
+    ghost: 'text-gray-400 hover:bg-gray-800 focus:ring-gray-500'
   };
   
   const sizes = {
