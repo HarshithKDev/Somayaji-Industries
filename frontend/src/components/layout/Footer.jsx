@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold text-indigo-400 mb-4">Somayaji Industries</h3>
             <p className="text-gray-400 mb-4 leading-relaxed">
-              Your trusted partner for custom fabrication solutions. Quality craftsmanship, innovative designs, and exceptional service since 2008.
+Your trusted fabrication partner, delivering quality, innovation, and service you can depend on.
             </p>
           </div>
           
@@ -36,7 +36,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Somayaji Industries. All rights reserved. | Crafted with excellence in Mangaluru, Karnataka.
+            © 2025 Somayaji Industries. All rights reserved. | The heart of our craft is in Mangaluru, Karnataka.
           </p>
         </div>
       </div>

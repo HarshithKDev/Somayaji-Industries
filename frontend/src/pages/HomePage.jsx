@@ -27,10 +27,10 @@ const HeroSection = () => {
       {/* <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div> */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-          Quality Craftsmanship in <span className="text-indigo-400">Every Piece</span>
+          Somayaji Industries: Engineering Excellence in <span className="text-indigo-400">Metal and Wood</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Custom fabrication solutions for your industrial and residential needs. From iron gates to wooden furniture, we craft excellence.
+          Industrial strength, residential style. Your trusted partner in fabrication, from grand iron gates to elegant wooden furniture.
         </p>
         <div className="space-x-4">
           <Button size="lg" onClick={() => document.getElementById('products').scrollIntoView({ behavior: 'smooth' })}>
@@ -131,7 +131,7 @@ const StatsSection = () => {
   const stats = [
     { icon: Award, label: 'Years Experience', value: '20+' },
     { icon: Users, label: 'Happy Customers', value: '500+' },
-    { icon: Settings, label: 'Projects Completed', value: '1000+' }
+    { icon: Settings, label: 'Pieces Crafted', value: '1000+' }
   ];
 
   return (

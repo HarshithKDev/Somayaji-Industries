@@ -10,7 +10,7 @@ const AboutSection = () => {
             <h2 className="text-4xl font-bold text-white mb-6">About Somayaji Industries</h2>
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
               <p>
-                Founded with a vision to deliver exceptional craftsmanship, Somayaji Industries has been a trusted name in custom fabrication for over 15 years. We specialize in creating high-quality metal and wooden products that combine functionality with aesthetic appeal.
+                Founded with a vision to deliver exceptional craftsmanship, Somayaji Industries has been a trusted name in custom fabrication for over 20 years. We specialize in creating high-quality metal and wooden products that combine functionality with aesthetic appeal.
               </p>
               <p>
                 Our team of skilled craftsmen and modern equipment enables us to handle projects of all sizes, from individual custom pieces to large-scale industrial installations. We take pride in our attention to detail and commitment to using only the finest materials.
@@ -40,7 +40,7 @@ const AboutSection = () => {
                   <div className="w-6 h-6 bg-indigo-600 rounded-full flex items-center justify-center">
                     <span className="text-white text-sm">✓</span>
                   </div>
-                  <span className="text-gray-300">15+ Years of Experience</span>
+                  <span className="text-gray-300">20+ Years of Experience</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-indigo-600 rounded-full flex items-center justify-center">
@@ -58,7 +58,7 @@ const AboutSection = () => {
                   <div className="w-6 h-6 bg-indigo-600 rounded-full flex items-center justify-center">
                     <span className="text-white text-sm">✓</span>
                   </div>
-                  <span className="text-gray-300">Timely Project Delivery</span>
+                  <span className="text-gray-300">Efficient and Punctual Service</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-indigo-600 rounded-full flex items-center justify-center">
