@@ -2,11 +2,11 @@ import React from 'react';
 import { Phone, Mail, MapPin, Award, Users, Settings } from 'lucide-react';
 import Button from '../components/ui/Button';
 import gateImage from '../assets/gate.webp';
-import deskImage from '../assets/table.webp'; 
+import deskImage from '../assets/table.png'; 
 import railingsImage from '../assets/railing.webp'; 
 import shelvesImage from '../assets/shelf.webp';
 import decorImage from '../assets/decor.webp'; 
-import cupImage from '../assets/cup.webp'; 
+import cupImage from '../assets/cup.png'; 
 
 // Hero Section Component
 const HeroSection = () => {
