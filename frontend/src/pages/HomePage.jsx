@@ -5,9 +5,9 @@ import heroBackground from '../assets/hero-bg.webp';
 import gateImage from '../assets/gate.webp';
 import deskImage from '../assets/table.webp'; 
 import railingsImage from '../assets/railing.webp'; 
-import shelvesImage from '../assets/shelf.webp';// Your gate image
-import decorImage from '../assets/decor.webp'; // Your decor image
-import cupImage from '../assets/cup.webp'; // Your decor image
+import shelvesImage from '../assets/shelf.webp';
+import decorImage from '../assets/decor.webp'; 
+import cupImage from '../assets/cup.webp'; 
 
 // Hero Section Component
 const HeroSection = () => {
