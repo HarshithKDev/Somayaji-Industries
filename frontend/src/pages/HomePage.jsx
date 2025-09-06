@@ -1,12 +1,21 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Award, Users, Settings } from 'lucide-react';
 import Button from '../components/ui/Button';
-import gateImage from '../assets/gate.webp';
-import deskImage from '../assets/table.png'; 
-import railingsImage from '../assets/railing.webp'; 
-import shelvesImage from '../assets/shelf.webp';
-import decorImage from '../assets/decor.webp'; 
-import cupImage from '../assets/cup.png'; 
+import teapoyImage from '../assets/teapoy.png';
+import tvImage from '../assets/tv.png';
+import bedImage from '../assets/bed.png';
+import divanaImage from '../assets/divana.png';
+import sofaImage from '../assets/sofa.png';
+import alImage from '../assets/al.png';
+import rackImage from '../assets/rack.png';
+import cotImage from '../assets/cot.png';
+import steeldivanaImage from '../assets/steeldivana.png';
+import officetableImage from '../assets/officetable.png';
+import shoeImage from '../assets/shoe.png';
+import steeldinningImage from '../assets/steeldinning.png';
+
+// Placeholder image for new products
+const placeholderImage = 'https://via.placeholder.com/600x400';
 
 // Hero Section Component
 const HeroSection = () => {
@@ -68,41 +77,145 @@ const ProductCard = ({ title, description, category, image }) => {
 // Products Section Component
 const ProductsSection = () => {
     const products = [
+        
+        // New items from the image
         {
-          title: 'Iron Benches & Gates',
-          description: 'Durable and elegant iron benches and gates crafted with precision. Perfect for gardens, parks, and residential entrances.',
-          category: 'Metalwork',
-          image: gateImage,
+            title: 'Teapoys',
+            description: 'Stylish and functional teapoys for your living room.',
+            category: 'Wooden Furniture',
+            image: teapoyImage, 
         },
         {
-          title: 'Metal Cupboards',
-          description: 'Heavy-duty storage solutions with modern designs. Ideal for offices, warehouses, and industrial applications.',
-          category: 'Storage',
-          image: cupImage, // Replace with your image
+            title: 'Tv Cabinet',
+            description: 'Custom-designed TV cabinets to fit your space and style.',
+            category: 'Wooden Furniture',
+            image: tvImage, 
         },
         {
-          title: 'Wooden Tables & Desks',
-          description: 'Handcrafted wooden furniture combining functionality with aesthetic appeal. Custom designs available.',
-          category: 'Furniture',
-          image: deskImage, // Replace with your image
+            title: 'Wooden Cots',
+            description: 'Comfortable and durable wooden cots.',
+            category: 'Wooden Furniture',
+            image: bedImage, 
         },
         {
-          title: 'Custom Railings',
-          description: 'Safety railings for stairs, balconies, and terraces. Available in various materials and finishes.',
-          category: 'Safety',
-          image: railingsImage, // Replace with your image
+            title: 'Wooden Diwanas',
+            description: 'Elegant and classic wooden diwanas for your home.',
+            category: 'Wooden Furniture',
+            image: divanaImage, 
         },
         {
-          title: 'Industrial Shelving',
-          description: 'Heavy-duty shelving systems for warehouses and industrial spaces. Modular and scalable solutions.',
-          category: 'Industrial',
-          image: shelvesImage, // Replace with your image
+            title: 'Wooden Sofasets',
+            description: 'Handcrafted wooden sofasets for a timeless appeal.',
+            category: 'Wooden Furniture',
+            image: sofaImage, 
         },
         {
-          title: 'Decorative Items',
-          description: 'Custom decorative pieces for homes and offices. Unique designs tailored to your preferences.',
-          category: 'Decor',
-          image: decorImage, // Replace with your image
+            title: 'Almirahs',
+            description: 'Secure and spacious almirahs for all your storage needs.',
+            category: 'Steel Furniture',
+            image: alImage, 
+        },
+        {
+            title: 'Steel Racks',
+            description: 'Durable steel racks for industrial and commercial use.',
+            category: 'Steel Furniture',
+            image: rackImage, 
+        },
+        {
+            title: 'Steel Cots',
+            description: 'Strong and sturdy steel cots for long-lasting use.',
+            category: 'Steel Furniture',
+            image: cotImage, 
+        },
+        {
+            title: 'Steel Diwanas',
+            description: 'Modern and sleek steel diwanas.',
+            category: 'Steel Furniture',
+            image: steeldivanaImage, 
+        },
+        {
+            title: 'Steel Office Tables',
+            description: 'Functional and robust steel tables for any office environment.',
+            category: 'Steel Furniture',
+            image: officetableImage, 
+        },
+        {
+            title: 'Steel Shoe Racks',
+            description: 'Organize your footwear with our strong and efficient steel shoe racks.',
+            category: 'Steel Furniture',
+            image: shoeImage, 
+        },
+        {
+            title: 'Steel Dining Set',
+            description: 'Contemporary steel dining sets for a stylish dining experience.',
+            category: 'Steel Furniture',
+            image: steeldinningImage, 
+        },
+        {
+            title: 'Steel Sofa',
+            description: 'Durable and low-maintenance steel sofas.',
+            category: 'Steel Furniture',
+            image: placeholderImage, 
+        },
+        {
+            title: 'Bank Safe Lockers',
+            description: 'High-security bank safe lockers for valuable storage.',
+            category: 'Steel Furniture',
+            image: placeholderImage, 
+        },
+        {
+            title: 'School, College Furniture',
+            description: 'Functional and sturdy furniture for educational institutions.',
+            category: 'Steel Furniture',
+            image: placeholderImage, 
+        },
+        {
+            title: 'Hospital Furniture',
+            description: 'Specialized furniture designed for hospital and healthcare environments.',
+            category: 'Steel Furniture',
+            image: placeholderImage, 
+        },
+        {
+            title: 'Rocking Chairs',
+            description: 'Relax in style with our comfortable rocking chairs.',
+            category: 'Others',
+            image: placeholderImage, 
+        },
+        {
+            title: 'Side Box',
+            description: 'Convenient side boxes for storage and organization.',
+            category: 'Others',
+            image: placeholderImage, 
+        },
+        {
+            title: 'Shoe Racks',
+            description: 'Organize your shoes with our practical and space-saving shoe racks.',
+            category: 'Others',
+            image: placeholderImage, 
+        },
+        {
+            title: 'Chest of Drawer',
+            description: 'A classic chest of drawers for versatile storage.',
+            category: 'Others',
+            image: placeholderImage, 
+        },
+        {
+            title: 'Book Rack',
+            description: 'Stylish book racks to display your collection.',
+            category: 'Others',
+            image: placeholderImage, 
+        },
+        {
+            title: 'Desk',
+            description: 'A functional desk for your workspace.',
+            category: 'Others',
+            image: placeholderImage, 
+        },
+        {
+            title: 'Ladder',
+            description: 'Durable and safe ladders for various uses.',
+            category: 'Others',
+            image: placeholderImage, 
         }
       ];
 
