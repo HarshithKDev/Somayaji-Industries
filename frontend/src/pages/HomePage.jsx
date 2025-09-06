@@ -13,6 +13,17 @@ import steeldivanaImage from '../assets/steeldivana.png';
 import officetableImage from '../assets/officetable.png';
 import shoeImage from '../assets/shoe.png';
 import steeldinningImage from '../assets/steeldinning.png';
+import steelsofaImage from '../assets/steelsofa.png';
+import lockerImage from '../assets/locker.png';
+import schoolImage from '../assets/school.png';
+import hospitalImage from '../assets/hospital.png';
+import chairImage from '../assets/chair.png';
+import sideboxImage from '../assets/sidebox.png';
+import chestImage from '../assets/chest.png';
+import shelfImage from '../assets/shelf.png';
+import homedeskImage from '../assets/homedesk.png';
+
+
 
 // Placeholder image for new products
 const placeholderImage = 'https://via.placeholder.com/600x400';
@@ -155,37 +166,37 @@ const ProductsSection = () => {
             title: 'Steel Sofa',
             description: 'Durable and low-maintenance steel sofas.',
             category: 'Steel Furniture',
-            image: placeholderImage, 
+            image: steelsofaImage, 
         },
         {
             title: 'Bank Safe Lockers',
             description: 'High-security bank safe lockers for valuable storage.',
             category: 'Steel Furniture',
-            image: placeholderImage, 
+            image: lockerImage, 
         },
         {
-            title: 'School, College Furniture',
+            title: 'School Furniture',
             description: 'Functional and sturdy furniture for educational institutions.',
             category: 'Steel Furniture',
-            image: placeholderImage, 
+            image: schoolImage, 
         },
         {
             title: 'Hospital Furniture',
             description: 'Specialized furniture designed for hospital and healthcare environments.',
             category: 'Steel Furniture',
-            image: placeholderImage, 
+            image: hospitalImage, 
         },
         {
             title: 'Rocking Chairs',
             description: 'Relax in style with our comfortable rocking chairs.',
             category: 'Others',
-            image: placeholderImage, 
+            image: chairImage, 
         },
         {
             title: 'Side Box',
             description: 'Convenient side boxes for storage and organization.',
             category: 'Others',
-            image: placeholderImage, 
+            image: sideboxImage, 
         },
         {
             title: 'Shoe Racks',
@@ -197,19 +208,19 @@ const ProductsSection = () => {
             title: 'Chest of Drawer',
             description: 'A classic chest of drawers for versatile storage.',
             category: 'Others',
-            image: placeholderImage, 
+            image: chestImage, 
         },
         {
             title: 'Book Rack',
             description: 'Stylish book racks to display your collection.',
             category: 'Others',
-            image: placeholderImage, 
+            image: shelfImage, 
         },
         {
             title: 'Desk',
             description: 'A functional desk for your workspace.',
             category: 'Others',
-            image: placeholderImage, 
+            image: homedeskImage, 
         },
         {
             title: 'Ladder',
