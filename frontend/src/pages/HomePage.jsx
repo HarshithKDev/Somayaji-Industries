@@ -19,9 +19,11 @@ import schoolImage from '../assets/school.png';
 import hospitalImage from '../assets/hospital.png';
 import chairImage from '../assets/chair.png';
 import sideboxImage from '../assets/sidebox.png';
+import woodshoeImage from '../assets/woodshoe.png';
 import chestImage from '../assets/chest.png';
 import shelfImage from '../assets/shelf.png';
 import homedeskImage from '../assets/homedesk.png';
+import ladderImage from '../assets/ladder.png';
 
 
 
@@ -202,7 +204,7 @@ const ProductsSection = () => {
             title: 'Shoe Racks',
             description: 'Organize your shoes with our practical and space-saving shoe racks.',
             category: 'Others',
-            image: placeholderImage, 
+            image: woodshoeImage, 
         },
         {
             title: 'Chest of Drawer',
@@ -226,7 +228,7 @@ const ProductsSection = () => {
             title: 'Ladder',
             description: 'Durable and safe ladders for various uses.',
             category: 'Others',
-            image: placeholderImage, 
+            image: ladderImage, 
         }
       ];
 
