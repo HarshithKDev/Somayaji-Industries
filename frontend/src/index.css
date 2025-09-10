@@ -5,21 +5,25 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: dark;
-  background-color: #111827; /* bg-gray-900 */
-  color: #E5E7EB; /* text-gray-200 */
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Default Dark Theme */
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
   background-color: #111827; /* bg-gray-900 */
+  color: #E5E7EB; /* text-gray-200 */
+}
+
+/* Light Theme */
+body.light {
+  background-color: #f3f4f6; /* bg-gray-100 */
+  color: #1f2937; /* text-gray-900 */
 }
 
 a {
@@ -34,4 +38,62 @@ a:hover {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+/* Custom styles for the light theme to specific components to ensure visibility */
+body.light .bg-gray-900 {
+  background-color: #f9fafb; /* bg-gray-50 */
+}
+
+body.light .bg-gray-900\/80 {
+  background-color: rgb(249 250 251 / 0.8);
+  backdrop-filter: blur(8px);
+}
+
+body.light .border-gray-700 {
+  border-color: #e5e7eb; /* gray-200 */
+}
+
+body.light .text-gray-300 {
+  color: #374151; /* gray-700 */
+}
+
+body.light .text-gray-400 {
+  color: #4b5563; /* gray-600 */
+}
+
+body.light .bg-gray-800 {
+  background-color: #e5e7eb; /* bg-gray-200 */
+}
+
+body.light .bg-gray-700 {
+  background-color: #d1d5db; /* gray-300 */
+}
+
+body.light .bg-indigo-700 {
+  background-color: #4f46e5; /* indigo-600 */
+}
+
+body.light .text-white {
+  color: #1f2937; /* gray-900 */
+}
+
+body.light .text-gray-200 {
+    color: #4b5563; /* gray-600 */
+}
+
+body.light .text-indigo-400 {
+  color: #4f46e5; /* indigo-600 */
+}
+
+body.light .bg-indigo-900 {
+  background-color: #c7d2fe; /* indigo-200 */
+}
+
+body.light .text-indigo-300 {
+  color: #3730a3; /* indigo-800 */
+}
+
+body.light .bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, #e5e7eb, #d1d5db);
 }

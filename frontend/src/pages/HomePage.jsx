@@ -34,7 +34,7 @@ const placeholderImage = 'https://via.placeholder.com/600x400';
 const HeroSection = () => {
   
   const heroPatternStyle = {
-    backgroundColor: '#111827', // bg-gray-900
+    backgroundColor: 'var(--hero-bg-color)', 
     backgroundImage: `radial-gradient(rgba(107, 114, 128, 0.2) 1px, transparent 0)`,
     backgroundSize: '1rem 1rem',
   };
@@ -42,8 +42,7 @@ const HeroSection = () => {
   return (
    <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center" 
-      style={heroPatternStyle} // Use the new pattern style
+      className="relative min-h-screen flex items-center justify-center hero-pattern" 
     >
       {/* This overlay is no longer needed with the CSS pattern but can be kept for a vignette effect if desired */}
       {/* <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div> */}
