@@ -190,43 +190,43 @@ const ProductsSection = () => {
         {
             title: 'Rocking Chairs',
             description: 'Relax in style with our comfortable rocking chairs.',
-            category: 'Others',
+            category: 'Wooden Furniture',
             image: chairImage, 
         },
         {
             title: 'Side Box',
             description: 'Convenient side boxes for storage and organization.',
-            category: 'Others',
+            category: 'Wooden Furniture',
             image: sideboxImage, 
         },
         {
             title: 'Shoe Racks',
             description: 'Organize your shoes with our practical and space-saving shoe racks.',
-            category: 'Others',
+            category: 'Wooden Furniture',
             image: woodshoeImage, 
         },
         {
             title: 'Chest of Drawer',
             description: 'A classic chest of drawers for versatile storage.',
-            category: 'Others',
+            category: 'Wooden Furniture',
             image: chestImage, 
         },
         {
             title: 'Book Rack',
             description: 'Stylish book racks to display your collection.',
-            category: 'Others',
+            category: 'Wooden Furniture',
             image: shelfImage, 
         },
         {
             title: 'Desk',
             description: 'A functional desk for your workspace.',
-            category: 'Others',
+            category: 'Wooden Furniture',
             image: homedeskImage, 
         },
         {
             title: 'Ladder',
             description: 'Durable and safe ladders for various uses.',
-            category: 'Others',
+            category: 'Steel Furniture',
             image: ladderImage, 
         }
       ];
