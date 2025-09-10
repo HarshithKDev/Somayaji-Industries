@@ -260,7 +260,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-indigo-700">
+    <section className="py-16 bg-indigo-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           {stats.map((stat, index) => (
@@ -314,12 +314,7 @@ const ContactSection = () => {
             </a>
           </div>
         </div>
-        
-        <div className="mt-12 text-center">
-          <Button size="lg">
-            Request Quote
-          </Button>
-        </div>
+  
       </div>
     </section>
   );
