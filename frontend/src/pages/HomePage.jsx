@@ -255,8 +255,8 @@ const ProductsSection = () => {
 const StatsSection = () => {
   const stats = [
     { icon: Award, label: 'Years Experience', value: '30+' },
-    { icon: Users, label: 'Happy Customers', value: '500+' },
-    { icon: Settings, label: 'Pieces Crafted', value: '1000+' }
+    { icon: Users, label: 'Happy Customers', value: '5000+' },
+    { icon: Settings, label: 'Pieces Crafted', value: '10000+' }
   ];
 
   return (

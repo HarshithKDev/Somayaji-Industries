@@ -10,11 +10,11 @@ const AboutSection = () => {
           {/* Left Column - About, Mission, Values */}
           <div>
             <h2 className="text-4xl font-bold text-white mb-6">
-              About Somayaji Industries - Ill
+              About Somayaji Industries
             </h2>
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
               <p>
-                Somayaji Industries - Ill is a reputed manufacturer, supplier and
+                Somayaji Industries is a reputed manufacturer, supplier and
                 service provider offering a wide range of sleek, ergonomic and user
                 friendly furniture. Our product range spans steel and wood furniture,
                 powder coated educational/institutional furniture and hospital
