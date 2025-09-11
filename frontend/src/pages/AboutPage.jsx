@@ -16,7 +16,7 @@ const AboutSection = () => {
                 Our team of skilled craftsmen and modern equipment enables us to handle projects of all sizes, from individual custom pieces to large-scale industrial installations. We take pride in our attention to detail and commitment to using only the finest materials.
               </p>
               <p>
-                Whether you need durable iron gates, elegant wooden furniture, or industrial storage solutions, we work closely with our clients to bring their vision to life. Quality, reliability, and customer satisfaction are at the heart of everything we do.
+                Whether you need elegant wooden furniture, or industrial storage solutions, we work closely with our clients to bring their vision to life. Quality, reliability, and customer satisfaction are at the heart of everything we do.
               </p>
             </div>
             

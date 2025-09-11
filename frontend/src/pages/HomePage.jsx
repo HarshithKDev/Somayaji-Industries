@@ -283,7 +283,7 @@ const ContactSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-xl text-gray-300">Ready to start your project? Contact us today for a consultation.</p>
+          <p className="text-xl text-gray-300">Looking for quality furniture? Contact us today to explore our collection.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
