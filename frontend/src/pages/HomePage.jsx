@@ -254,6 +254,19 @@ const ProductsSection = () => {
             image: ladderImage, 
         }
       ];
+  
+    const [filter, setFilter] = useState('all');
+
+    const filteredProducts = products.filter(product => {
+        if (filter === 'all') {
+            return true;
+        } else if (filter === 'wooden') {
+            return product.category === 'Wooden Furniture';
+        } else if (filter === 'steel') {
+            return product.category === 'Steel Furniture';
+        }
+        return true;
+    });
 
   return (
     <section id="products" className="py-20 bg-gray-900">
@@ -264,9 +277,31 @@ const ProductsSection = () => {
             Discover our wide range of custom-fabricated products, each crafted with attention to detail and built to last.
           </p>
         </div>
+
+        {/* Category Toggle */}
+        <div className="flex justify-center mb-8 space-x-4">
+          <Button 
+            variant={filter === 'all' ? 'primary' : 'secondary'}
+            onClick={() => setFilter('all')}
+          >
+            All Products
+          </Button>
+          <Button 
+            variant={filter === 'wooden' ? 'primary' : 'secondary'}
+            onClick={() => setFilter('wooden')}
+          >
+            Wooden Furniture
+          </Button>
+          <Button 
+            variant={filter === 'steel' ? 'primary' : 'secondary'}
+            onClick={() => setFilter('steel')}
+          >
+            Steel Furniture
+          </Button>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, index) => (
+          {filteredProducts.map((product, index) => (
             <ProductCard key={index} {...product} />
           ))}
         </div>

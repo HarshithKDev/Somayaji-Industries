@@ -9,28 +9,31 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold text-indigo-400 mb-4">Somayaji Industries</h3>
             <p className="text-gray-400 mb-4 leading-relaxed">
-Your trusted fabrication partner, delivering quality, innovation, and service you can depend on.
+              Your trusted fabrication partner, delivering quality, innovation, and service you can depend on.
             </p>
           </div>
           
-          <div>
-            <h4 className="text-lg font-bold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-400 hover:text-indigo-400 transition-colors">Home</a></li>
-              <li><a href="#products" className="text-gray-400 hover:text-indigo-400 transition-colors">Products</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-indigo-400 transition-colors">About Us</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-indigo-400 transition-colors">Contact</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-bold mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li><span className="text-gray-400">Custom Fabrication</span></li>
-              <li><span className="text-gray-400">Metal Work</span></li>
-              <li><span className="text-gray-400">Wooden Furniture</span></li>
-              <li><span className="text-gray-400">Industrial Solutions</span></li>
-            </ul>
+          {/* Flex container to hold Quick Links and Services side-by-side */}
+          <div className="flex flex-row justify-between col-span-1 md:col-span-2 gap-8">
+            <div>
+              <h4 className="text-lg font-bold mb-4">Quick Links</h4>
+              <ul className="space-y-2">
+                <li><a href="#home" className="text-gray-400 hover:text-indigo-400 transition-colors">Home</a></li>
+                <li><a href="#products" className="text-gray-400 hover:text-indigo-400 transition-colors">Products</a></li>
+                <li><a href="#about" className="text-gray-400 hover:text-indigo-400 transition-colors">About Us</a></li>
+                <li><a href="#contact" className="text-gray-400 hover:text-indigo-400 transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-bold mb-4">Services</h4>
+              <ul className="space-y-2">
+                <li><span className="text-gray-400">Custom Fabrication</span></li>
+                <li><span className="text-gray-400">Metal Work</span></li>
+                <li><span className="text-gray-400">Wooden Furniture</span></li>
+                <li><span className="text-gray-400">Industrial Solutions</span></li>
+              </ul>
+            </div>
           </div>
         </div>
         
