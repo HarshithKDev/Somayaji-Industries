@@ -41,7 +41,6 @@ const HeroSection = () => {
     <section 
       id="home" 
       className="relative h-screen flex items-center justify-center overflow-hidden"
-      style={{ paddingTop: '4rem' }}
     >
       {/* Clean Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
@@ -89,6 +88,8 @@ const HeroSection = () => {
     </section>
   );
 };
+
+// ... (rest of the file remains the same)
 
 // Product Card Component
 const ProductCard = ({ title, description, category, image }) => {

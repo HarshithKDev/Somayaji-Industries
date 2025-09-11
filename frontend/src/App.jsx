@@ -12,7 +12,7 @@ const App = () => {
       <Navbar />
 
       {/* Main Content */}
-      <main className="pt-16">
+      <main>
         <HomePage />
         <AboutPage />
       </main>
