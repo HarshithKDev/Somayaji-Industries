@@ -254,7 +254,7 @@ const ProductsSection = () => {
 // Stats Component
 const StatsSection = () => {
   const stats = [
-    { icon: Award, label: 'Years Experience', value: '20+' },
+    { icon: Award, label: 'Years Experience', value: '30+' },
     { icon: Users, label: 'Happy Customers', value: '500+' },
     { icon: Settings, label: 'Pieces Crafted', value: '1000+' }
   ];
