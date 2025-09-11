@@ -1,5 +1,5 @@
-import React from 'react';
-import { Phone, Mail, MapPin, Award, Users, Settings } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Phone, Mail, MapPin, Award, Users, Settings, ArrowDown, Sparkles, Hammer, Wrench } from 'lucide-react';
 import Button from '../components/ui/Button';
 import teapoyImage from '../assets/teapoy.webp';
 import tvImage from '../assets/tv.webp';
@@ -25,47 +25,69 @@ import shelfImage from '../assets/shelf.webp';
 import homedeskImage from '../assets/homedesk.webp';
 import ladderImage from '../assets/ladder.webp';
 
-
-
-// Placeholder image for new products
-const placeholderImage = 'https://via.placeholder.com/600x400';
-
-// Hero Section Component
+// Enhanced Hero Section Component
 const HeroSection = () => {
-  
-  const heroPatternStyle = {
-    backgroundColor: 'var(--hero-bg-color)', 
-    backgroundImage: `radial-gradient(rgba(107, 114, 128, 0.2) 1px, transparent 0)`,
-    backgroundSize: '1rem 1rem',
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const scrollToProducts = () => {
+    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-   <section 
+    <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center hero-pattern" 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* This overlay is no longer needed with the CSS pattern but can be kept for a vignette effect if desired */}
-      {/* <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div> */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-          Somayaji Industries: Engineering Excellence in <span className="text-indigo-400">Metal and Wood</span>
+      {/* Clean Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        {/* Subtle Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%)`,
+            backgroundSize: '200px 200px'
+          }}>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Company Name */}
+        <h1 className={`text-5xl sm:text-6xl md:text-7xl font-bold mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <span className="block text-white mb-2">Somayaji</span>
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">
+            Industries
+          </span>
         </h1>
-        <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Industrial strength, residential style. Your trusted partner in fabrication, from grand iron gates to elegant wooden furniture.
+
+        {/* Simple Tagline */}
+        <p className={`text-xl sm:text-2xl text-gray-300 mb-12 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          Crafting quality furniture in metal & wood for over 30 years
         </p>
-        <div className="space-x-4">
-          <Button size="lg" onClick={() => document.getElementById('products').scrollIntoView({ behavior: 'smooth' })}>
-            Explore Our Products
-          </Button>
-          <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-gray-900" onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}>
-            Learn More
+
+        {/* Single CTA Button */}
+        <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <Button 
+            size="lg" 
+            className="px-10 py-4 text-lg font-semibold bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-indigo-500/25"
+            onClick={scrollToProducts}
+          >
+            View Our Products
           </Button>
         </div>
+      </div>
+
+      {/* Simple Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <ArrowDown className="w-6 h-6 text-gray-400" />
       </div>
     </section>
   );
 };
-
 
 // Product Card Component
 const ProductCard = ({ title, description, category, image }) => {
